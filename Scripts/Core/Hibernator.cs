@@ -16,7 +16,7 @@ namespace Hibzz.Hibernator
 			set 
 			{
 				renderFrequency = value;
-				renderInterval = Mathf.FloorToInt(Application.targetFrameRate* renderFrequency);
+				renderInterval = CalculateRenderInterval(value);
 			} 
 		}
 
@@ -38,6 +38,7 @@ namespace Hibzz.Hibernator
 		public void Begin()
 		{
 			isRunning = true;
+			time = 0.5f; // some small value greater than delta time for initial graphincs buffering
 		}
 
 		/// <summary>
@@ -65,7 +66,7 @@ namespace Hibzz.Hibernator
 			if(!isRunning) { return; }
 
 			// when requesting refresh, maximize the rendering refresh rate
-			if (time > 0)
+			if (time >= 0)
 			{
 				OnDemandRendering.renderFrameInterval = 0;
 				time -= Time.deltaTime;
@@ -74,6 +75,18 @@ namespace Hibzz.Hibernator
 			{
 				OnDemandRendering.renderFrameInterval = renderInterval;
 			}
+		}
+
+		// function to calculate the render interval
+		private int CalculateRenderInterval(float frequency)
+		{
+			float frameRate = Application.targetFrameRate;
+			if(frameRate < 0)
+			{
+				frameRate = 1 / Time.deltaTime;
+			}
+
+			return Mathf.FloorToInt(frameRate * renderFrequency);
 		}
 	}
 }
