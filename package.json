@@ -8,5 +8,8 @@
     "email": "support@hibzz.games",
     "url": "https://hibzz.games/"
   },
+  "documentationUrl": "https://github.com/Hibzz-Games/Hibzz.Hibernator/blob/main/README.md",
+  "changelogUrl": "https://github.com/Hibzz-Games/Hibzz.Hibernator/commits/",
+  "licensesUrl":"https://github.com/Hibzz-Games/Hibzz.Hibernator/blob/main/LICENSE",
   "type": "library"
 }

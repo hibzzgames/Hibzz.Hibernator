@@ -1,9 +1,23 @@
 # Hibzz.Hibernator
  A library used to create low performant idle applications in Unity
 
+### Installation
+**Via NPM**
+This package is published to the NPM registery, so users can install and get updates directly in the Unity Package Manager when the package is installed via NPM.
+- Navigate to the advanced project settings menu in the Unity Package Manager
+- Create a new scoped registry with the URL `https://registry.npmjs.org`
+- Add `com.hibzz.hibernator` as scope
+- Now you'll be able to view and install the package under the "My Registeries" in the Package Manager.
+
+**Via Github**
+This package can be installed in the Unity Package Manager using the following git URL.
+```
+https://github.com/Hibzz-Games/Hibzz.Hibernator.git
+```
+
 ### Usage
+Initializing the Hibernator
 ```c#
-// Initializing the Hibernator
 using Hibzz.Hibernator;
 
 public class GameManager : MonoBehavior
@@ -25,8 +39,8 @@ public class GameManager : MonoBehavior
 }
 ```
 
+Refreshing Graphics
 ```c#
-// Refreshing graphics
 using Hibzz.Hibernator;
 
 public class RotateClass : MonoBehavior
