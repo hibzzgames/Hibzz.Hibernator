@@ -1,6 +1,6 @@
 {
   "name": "com.hibzz.hibernator",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "displayName": "hibzz.hibernator",
   "description": "A library used to create low performant idle applications in Unity",
   "author": {
