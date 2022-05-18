@@ -1,7 +1,17 @@
 # Hibzz.Hibernator
  A library used to create low performant idle applications in Unity
 
-### Installation
+**Without Hibernator**
+
+![image](https://user-images.githubusercontent.com/37605842/169102028-5f13ad7d-8c4c-4934-80d8-ed9698bdfe7a.png)
+
+**With Hibernator**
+
+![image](https://user-images.githubusercontent.com/37605842/169102077-b522b8b3-dd25-4953-aa97-28d9548c9fc3.png)
+
+<br>
+
+## Installation
 **Via NPM**
 This package is published to the NPM registery, so users can install and get updates directly in the Unity Package Manager when the package is installed via NPM.
 - Navigate to the advanced project settings menu in the Unity Package Manager
@@ -15,10 +25,9 @@ This package can be installed in the Unity Package Manager using the following g
 https://github.com/Hibzz-Games/Hibzz.Hibernator.git
 ```
 
-### Performance Benefits
-\<image goes here>
+<br>
 
-### Usage
+## Usage
 Initializing the Hibernator
 ```c#
 using Hibzz.Hibernator;
@@ -61,6 +70,8 @@ public class RotateClass : MonoBehavior
     }
 }
 ```
+
+<br>
 
 ### Optional Features
 While refreshing the hibernator, users can optionally give a time and the system will keep refreshing for the given time. This time is scalable by Time.TimeScale.
