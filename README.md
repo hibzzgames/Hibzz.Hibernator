@@ -15,6 +15,9 @@ This package can be installed in the Unity Package Manager using the following g
 https://github.com/Hibzz-Games/Hibzz.Hibernator.git
 ```
 
+### Performance Benefits
+\<image goes here>
+
 ### Usage
 Initializing the Hibernator
 ```c#
@@ -24,11 +27,12 @@ public class GameManager : MonoBehavior
 {
     void start()
     {
-        // How long (in seconds) should the system wait for refresh while hibernating? Here we wait for an hour!
-        Hibernator.Instance.RenderFrequency = 3600.0f; 
-
         // Start the system
         Hibernator.Instance.Begin();
+
+        // Optionally, you can specify render interval. Here, the screen is 
+        // refreshed once every 15 seconds
+        Hibernator.Instance.Begin(15.0f);
     }
 
     void OnDestroy()
