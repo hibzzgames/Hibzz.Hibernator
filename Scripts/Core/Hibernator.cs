@@ -13,11 +13,11 @@ namespace Hibzz.Hibernator
 		public float RenderFrequency 
 		{
 			get { return renderFrequency; } 
-			set 
+			private set 
 			{
 				renderFrequency = value;
 				renderInterval = CalculateRenderInterval(value);
-			} 
+			}
 		}
 
 		// how frequently should the screen refresh (in seconds)
@@ -35,10 +35,22 @@ namespace Hibzz.Hibernator
 		/// <summary>
 		/// Start the hibernator
 		/// </summary>
-		public void Begin()
+		public void Begin(float? renderFrequency = null)
 		{
 			isRunning = true;
 			time = 0.5f; // some small value greater than delta time for initial graphincs buffering
+
+			// If a render frequency is not given, then set it to maximum
+			if(renderFrequency == null)
+            {
+				this.renderFrequency = float.PositiveInfinity;
+				renderInterval = int.MaxValue;
+			}
+			else
+            {
+				// has a value, so set it
+				RenderFrequency = renderFrequency.Value;
+            }
 		}
 
 		/// <summary>
@@ -86,7 +98,7 @@ namespace Hibzz.Hibernator
 				frameRate = 1 / Time.deltaTime;
 			}
 
-			return Mathf.FloorToInt(frameRate * renderFrequency);
+			return Mathf.FloorToInt(frameRate * frequency);
 		}
 	}
 }
