@@ -1,4 +1,6 @@
 # Hibzz.Hibernator
+![npm](https://img.shields.io/npm/dt/com.hibzz.hibernator?style=for-the-badge) [![Twitter Follow](https://img.shields.io/twitter/follow/hibzzgames?color=1a8cd8&style=for-the-badge)](https://twitter.com/hibzzgames) [![Discord](https://img.shields.io/discord/695898694083412048?color=788bd9&label=DIscord&style=for-the-badge)](https://discord.gg/tZdZFK7) ![Unity](https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+
  A library used to create low performant idle applications in Unity
 
 **Without Hibernator**
